@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" />
+
+    <script src="https://kit.fontawesome.com/b5ec3bd5fd.js" crossorigin="anonymous"></script>
+
+
+    <style>
+        /* http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+    */
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: Arial, Helvetica, sans-serif;
+    vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+    display: block;
+    }
+    body {
+    line-height: 1;
+    }
+    
+    blockquote, q {
+    quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+    content: '';
+    content: none;
+    }
+    table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    }
+    
+    /* End of CSS Reset Code */
+    
+    .main-container {
+    max-width: 1190px;
+    margin: 0 auto;
+    }
+    
+    .inner-container {
+    display: flex;
+    justify-content: flex-start;
+    }
+    
+    .sidebar {
+    margin: 0;
+    padding: 0;
+    width: 38%;
+    
+    /* height: 100%; */
+    /* overflow: auto; */
+    border: 1px solid #f1f1f1;
+    }
+    
+    .resources {
+    padding-left: 15px;
+    }
+    
+    .resources-v2 {
+    margin: 0px 15px;
+    }
+    
+    .resources ul {
+    padding: 0px 20px;
+    }
+    
+    .resources-li-v1 {
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.75em;
+    color: #555;
+    }
+    
+    .resources-li-v2 {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.75em;
+    color: #555;
+    }
+    
+    div.content {
+    width: 60%;
+    padding: 1px 16px;
+    /* height: 1000px; */
+    }
+    
+    h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.7em;
+    font-weight: bold;
+    color: #003479;
+    
+    }
+    
+    h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #003479;
+    text-align: center;
+    padding-bottom: 15px;
+    }
+    
+    .banner {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 45px;
+    }
+    
+    
+    .intro-paras p {
+    padding: 0px 20px;
+    line-height: 1.75em;
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 25px;
+    color: #555;
+    text-align: left;
+    }
+    
+    .intro-paras li {
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.75em;
+    color: #555;
+    
+    }
+    
+    .individual-highlights li {
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.75em;
+    color: #555;
+    }
+    
+    .intro-paras ul {
+    padding: 0px 40px;
+    }
+    
+    
+    .full-report ul {
+    padding: 0px 20px;
+    }
+    
+    .individual-highlights ul {
+    padding: 0px 20px;
+    }
+    
+    .full-report p {
+    line-height: 1.75em;
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 25px;
+    color: #555;
+    text-align: left;
+    }
+    
+    .individual-highlights p {
+    line-height: 1.75em;
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 25px;
+    color: #555;
+    text-align: left;
+    }
+    
+    .table-text {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 25px;
+    color: #555;
+    font-size: 1.2em;
+    
+    }
+    
+    .table-text-v2 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 25px;
+    color: #555;
+    font-size: 1.2em;
+    
+    }
+    
+    .letter-headline {
+    background-color: #f1f1f1;
+    padding: 30px;
+    }
+    
+    .btn-linked {
+    border-radius: 8px;
+    padding: 25px;
+    background-color: #639ec8;
+    border: none;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    
+    }
+    
+    .btn-linked:hover {
+    
+    background-color: #003479;
+    
+    }
+    
+    .btn-linked-v2 {
+    border-radius: 8px;
+    padding: 25px;
+    background-color: #639ec8;
+    border: none;
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    }
+    
+    .btn-linked-v3 {
+    border-radius: 8px;
+    padding: 25px;
+    background-color: #639ec8;
+    border: none;
+    color: #fff;
+    margin: 15px 0px;
+    padding: 15px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    }
+    
+    .btn-linked-v4 {
+    border-radius: 8px;
+    padding: 25px;
+    background-color: #003479;
+    border: none;
+    color: #fff;
+    margin-top: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    width: 1000%;
+    }
+
+
+    .btn-linked-v6 {
+    border-radius: 8px;
+    padding: 25px;
+    background-color: #003479;
+    border: none;
+    color: #fff;
+    margin-top: 50;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    width: 1000%;
+    }
+
+    
+    .btn-linked-v5 {
+    border-radius: 8px;
+    padding: 25px;
+    background-color: #555;
+    border: none;
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    }
+    
+    .btn-linked-v2:hover {
+    background-color: #003479;
+    }
+    
+    .btn-linked-v3:hover {
+    background-color: #003479;
+    }
+    
+    .btn-linked-v4:hover {
+    background-color: #639ec8;
+    }
+    .btn-linked-v6:hover {
+    background-color: #639ec8;
+    }
+    
+    .btn-unique {
+    width: 49%;
+    }
+    
+    .btn-linked-v2 i {
+    padding-right: 15px;
+    }
+    
+    a {
+    text-decoration: none;
+    }
+    
+    .odd-list-item:hover {
+    background-color: #003479;
+    cursor: pointer;
+    }
+    
+    .even-list-item:hover {
+    background-color: #003479;
+    cursor: pointer;
+    }
+    
+    .odd-list-item button {
+    margin-right: 15px;
+    }
+    
+    
+    .odd-list-item {
+    background-color: #639ec8;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    }
+    
+    .even-list-item {
+    background-color: #555;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    }
+    
+    .letters-list {
+    margin-bottom: 25px;
+    }
+    
+    .two-col-container {
+    display: flex;
+    }
+    
+    .three-col-container {
+    display: flex;
+    }
+    
+    .full-report {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    
+    }
+    
+    .individual-highlights {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-left: 10px;
+    }
+    
+    .individual-highlights-v2 {
+    width: 100%;
+    padding: 0px 10px 0px 0px;
+    }
+    
+    .individual-highlights-v3 {
+    width: 100%;
+    }
+    
+    .letter-headline h2 {
+    text-align: center;
+    }
+    
+    .letter-headline-banner {
+    background-color: #ccc;
+    padding: 60px;
+    text-align: center;
+    margin-bottom: 30px;
+    }
+    
+    .key-findings {
+    color: #555; 
+    font-weight: bold; 
+    font-size: 1.5em; 
+    padding: 10px 25px;
+    }
+    
+    .parent-list {
+    /* font-size: 1.2em; */
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.75em;
+    color: #555;
+    }
+    
+    .sublist {
+    font-size: 0.9em;
+    }
+    
+    .sublist-v2 {
+    font-size: 0.75em;
+    }
+    
+    .space-v6{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    }
+    .space-v4{
+        margin-top: 50px;
+    margin-bottom: 50px;
+
+    }
+    
+    
+    /* End of responsive CSS rules */
+    
+    @media only screen and (max-width: 800px) {
+    
+    
+    .main-container {
+    display: table;
+    width: 90%;
+    padding: 0px 45px;
+    }
+    
+    div.content {
+    width: 100%;
+    padding: 0px 15px;
+    }
+    
+    .sidebar {
+    width: 100%;
+    
+    }
+    
+    .main-container > .inner-container {
+    display: flex;
+    flex-direction: column;
+    }
+    
+    .intro-paras p {
+    padding: 0px 40px;
+    
+    }
+    
+    
+    .banner {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    padding-bottom: 35px;
+    
+    
+    }
+    
+    .two-col-container {
+    display: flex;
+    flex-direction: column;
+    }
+    
+    .full-report {
+    width: 100%;
+    margin-bottom: 20px;
+    }
+    
+    .individual-highlights {
+    width: 100%;
+    }
+    
+    .secondary-nav-inner {
+    display: flex;
+    flex-direction: column;
+    }
+    
+    .dropbtn {
+    width: 100%;
+    margin-bottom: 15px;
+    }
+    
+    .dropbtn-v2 {
+    width: 98%;
+    }
+    
+    }
+    
+    
+    /* Beginning of media < 500px */
+    
+    @media only screen and (max-width: 500px) {
+    .btn-unique {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 1em;
+    }
+    
+    .table-text {
+    font-size: 1em;
+    }
+    
+    th {
+    font-size: 1.2em;
+    }
+    
+    .main-container {
+    width: 100%;
+    }
+    
+    .intro-paras p {
+    padding: 0px;
+    font-size: 1em;
+    }
+    
+    .btn-linked {
+    width: 100%;
+    font-size: 1em;
+    }
+    
+    .btn-linked-v2 {
+    font-size: 1em;
+    
+    }
+    
+    .btn-linked-v3 {
+    font-size: 1em;
+    }
+    
+    .btn-linked-v4 {
+    font-size: 1em;
+    }
+    
+    .btn-linked-v5 {
+    font-size: 1em;
+    }
+    
+    h2 {
+    font-size: 1.2em;
+    }
+    
+    }
+    
+    
+    /* End of media < 500px */
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+
+        <div class="banner">
+            <img src="https://www.cste.org/resource/resmgr/eca/Updated_ECA_logo.jpg" alt="Banner" width="30%" />
+
+        </div>
+        <!---End of Banner-->
+
+        <div class="inner-container-v2">
+
+            <!-----START OF Our Work Section----->
+            <div class="letter-headline">
+
+                <h2>Our Work</h2>
+
+            </div>
+            <!--- End of letter-headline-->
+
+            <br />
+
+            <div class="intro-paras">
+
+                <p>
+                    Since 2001, CSTE has conducted seven periodic Epidemiology Capacity Assessments (ECAs) to monitor the numerical strength and functional applied epidemiology capacity in state and territorial health departments.
+                </p>
+
+                <p>
+                    The 2021 ECA was completed by the State and Territorial Epidemiologists from all 50 states, the District of Columbia, and four territories. This report represents the most complete and comprehensive national data on epidemiology workforce needs.
+                </p>
+
+            </div>
+            <!--- End of intro-paras-->
+
+            <!---<br />
+
+  <div class="banner">
+    <img src="https://www.cste.org/resource/resmgr/eca/core-capacity-table-webready.png" alt="Banner" width="100%" />
+
+</div>
+End of Banner-->
+
+            <!----START OF three-col-container----->
+            <div class="three-col-container">
+
+                <div class="individual-highlights-v2">
+
+                    <a href="https://public.tableau.com/views/ECAv2CapacityCore/HomePage?:language=en-US&:display_count=n&:origin=viz_share_link" target="_blank"><button class="btn-linked-v2 btn-spacer">Data on Core Epi Capacity <i class="fas fa-angle-right"></i></button></a>
+                </div>
+
+                <div class="individual-highlights-v2">
+                    <a href="https://public.tableau.com/views/ECAv2Capacity/ProgramAreaCapacityDash?:language=en-US&:display_count=n&:origin=viz_share_link" target="_blank"><button class="btn-linked-v2 btn-spacer">Data on Program Area Capacity <i class="fas fa-angle-right"></i></button></a>
+                </div>
+
+                <div class="individual-highlights-v3">
+                    <a href="https://public.tableau.com/views/ECAv2/Salaries?:language=en-US&:display_count=n&:origin=viz_share_link" target="_blank"><button class="btn-linked-v2">Data on Salaries and Funding <i class="fas fa-angle-right"></i></button></a>
+                </div>
+
+            </div>
+            <!----END OF three-col-container----->
+
+
+            <!------<a href="https://public.tableau.com/app/profile/stephen.clay8427/viz/ECAv28/HomePage" target="_blank"><button class="btn-linked-v2">Click to View Data <i class="fas fa-angle-right"></i></button></a>
+<br />----->
+             <div class="space-v4">
+                <a  class="btn-linked-v4" href="https://www.cste.org/resource/resmgr/eca/2021_ECA_Report_FINAL.pdf" target="_blank"><i class="fas fa-file-pdf" aria-hidden="true"></i>  2021 Epidemiology Capacity Assessment Report</a>
+             </div>
+           
+            <br />
+            <div class="space-v6">
+                 <a  class="btn-linked-v6" href="https://www.cste.org/resource/resmgr/eca/2021_ECA_Report_FINAL.pdf" target="_blank"></i>Coming soon: CSTE is planning to field the next iteration of the Epidemiology Capacity Assessment in January 2024</a>
+
+            </div>
+           
+            <div class="fastlane-section">
+
+                <div class="two-col-container">
+
+                    <div class="full-report">
+
+                        <a href="https://www.cste.org/resource/resmgr/eca/ECA_2Pager21_FINAL__1_.pdf" target="_blank"><button class="btn-linked-v2"><i class="fas fa-file-pdf" aria-hidden="true"></i>2021 ECA Two-pager</button></a>
+
+                    </div>
+                    <!---End of Full-Report-->
+
+                    <div class="individual-highlights">
+
+                        <a href="https://www.cste.org/resource/resmgr/eca/ECA_ExecSumm21_FINAL__1_.pdf" target="_blank"><button class="btn-linked-v2"><i class="fas fa-table" aria-hidden="true"></i>ECA Executive Summary</button></a>
+
+                    </div>
+                    <!---End of Full-Report-->
+
+                </div>
+                <!----END OF two-col-container----->
+
+                <!----------
+            <a href="#" target="_blank"><button class="btn-linked-v5">Funding Guidance for States (Placeholder)</button></a>------------>
+                <br />
+
+            </div>
+            <!-------END OFD fastlane-section-->
+
+
+
+
+            <!-------ENDF OF Our Work Section------>
+
+
+
+            <!------START OF Key Findings Section----->
+
+            <div class="letter-headline">
+
+                <h2>Key Findings</h2>
+
+            </div>
+            <!--- End of letter-headline-->
+            <br />
+
+            <div class="intro-paras">
+                <ul>
+                    <li>Major gaps exist in the applied epidemiology workforce despite recent growth due to surge staffing for the COVID-19 pandemic response.</li>
+                    <li>An additional 2,196 epidemiologists are needed to deliver public health services in state and territorial health departments alone based on current operations, which would be a 53% increase in staffing. This does not account for epidemiology
+                        work force needs at the local or tribal levels.</li>
+                    <li>Since 2017, infectious disease, chronic disease and maternal and child health all experienced a decrease in epidemiologists. The applied epidemiology workforce is concentrated primarily in infectious disease and COVID-19 response.
+                    </li>
+                    <li>
+                        Most salary increases in career-level categories did not surpass the 7.9% inflation rate from 2017 to 2021, and many states struggled to stay competitive because their salaries ranged well below the national average.
+                    </li>
+                    <li>
+                        Departments continue to rely heavily on federal funding for epidemiology activities and personnel.
+                    </li>
+                    <li>
+                        Capacity to monitor and investigate health problems remains high, but evaluation and research capacity lag behind.
+                    </li>
+                    <li>Similar to 2017, the greatest training priority remains data analytics. </li>
+                </ul>
+
+            </div>
+            <!-----END of intro-paras--->
+
+
+            <br />
+
+            <div class="intro-paras">
+
+                <p>
+                    For more details, please see the 2021 ECA Two-Pager Report and the ECA Executive Summary.
+                </p>
+
+            </div>
+            <!--- End of intro-paras-->
+
+
+            <!------END OF Key Findings Section----->
+
+
+
+            <!----START OF Backgournd Section----->
+
+            <div class="letter-headline">
+
+                <h2>Background of the ECA</h2>
+
+            </div>
+            <!--- End of letter-headline-->
+
+            <br />
+
+            <div class="intro-paras">
+
+                <p>
+                    In 1995, CSTE spearheaded a national epidemiology workforce assessment effort and compiled a guide to aid states in assessment of their epidemiologic capacity. CSTE followed up this effort in 1997 with an assessment piloted in 10 states and in 2001 with
+                    the first ECA. The ECA was the first national assessment of core epidemiology capacity in state and territorial health departments. CSTE administered additional ECAs in 2004, 2006, 2009, 2013 and 2017. CSTE also conducted an epidemiology
+                    enumeration assessment in 2010 to determine the epidemiology workforce in both state and local health departments.
+
+                </p>
+
+            </div>
+            <!--- End of intro-paras-->
+
+            <!-----END OF Background of the ECA------>
+
+
+
+            <!----START OF Uses of ECA Data Section----->
+
+            <div class="letter-headline">
+
+                <h2>Uses of ECA Data</h2>
+
+            </div>
+            <!--- End of letter-headline-->
+
+            <br />
+
+            <div class="intro-paras">
+
+
+                <p>
+                    ECA data are paramount in CSTE’s advocacy efforts. Data from ECAs have been shared as Congressional hearing testimony in support of greater targeted funding for capacity development. ECA results help illuminate the status of state epidemiology efforts
+                    and assist our member states with targeting improvements in epidemiology capacity within their health departments. Future ECAs will attempt to continue capturing information about workforce capacity.
+                </p>
+
+            </div>
+            <!--- End of intro-paras-->
+
+
+
+        </div>
+        <!---END OF inner-container-->
+
+    </div>
+    <!-----END OF Main-Container---->
+
+
+
+
+    <div class="main-container">
+
+
+        <div class="inner-container-v2">
+
+
+            <div class="letter-headline">
+
+                <h2>Local ECA with Big Cities Health Coalition</h2>
+
+            </div>
+            <!--- End of letter-headline-->
+
+
+            <br />
+
+            <div class="intro-paras">
+                <p>In 2017, CSTE first collaborated with the <a href="https://www.bigcitieshealth.org/">Big Cities Health Coalition (BCHC)</a> to conduct a local Epidemiology Capacity Assessment to assess numeric and functional capacity in BCHC jurisdictions. An aggregate report of the 2017 findings can be found <a href="https://www.cste.org/resource/resmgr/eca/BCHA_ECA_WEB.pdf" target="_blank">here</a>. BCHC is a forum for leaders of America&rsquo;s largest metropolitan health departments to exchange strategies and work together to promote and protect the health and safety of the 62 million people they serve. In 2021, the ECA was tailored for big city health department use and administered to the 30 BCHC jurisdictions. A total of 26 jurisdictions participated and highlighted the need for additional epidemiologists and to bolster capacity across a number of program areas. An aggregate report of the 2021 findings can be found <a href="https://www.cste.org/resource/resmgr/eca/BCHC21_ECA_FINAL.pdf" target="_blank">here</a>.</p>
+                <p><strong>Key Findings</strong></p>
+                <ul>
+                <li>Big city health jurisdictions are heavily focused on infectious disease and COVID-19 response with less capacity in other program areas such as mental health, occupational health and genomics.</li>
+                <li>All program areas experienced a decline in the number of epidemiologists since 2017 except for the new program area of COVID-19 response.</li>
+                <li>Across BCHC jurisdictions, over a third of funding for epidemiology activities and personnel is provided by local sources with fewer federal dollars available than are to states.</li>
+                <li>Most jurisdictions have substantial capacity for monitoring health status and diagnosing and investigating health problems, whereas less than half have substantial capacity for research and evaluation.</li>
+                <li>Similar to 2017 and the state ECA, the highest training priority for BCHC jurisdictions remains data analytics.</li>
+                </ul>
+            </div>
+
+
+            <br />
+
+            <!----Previous ECA Reports Section----->
+
+            <div class="letter-headline">
+
+                <h2>ECA Reports </h2>
+
+            </div>
+            <!--- End of letter-headline-->
+
+            <br />
+
+            <div class="fastlane-section">
+
+                <a href="https://www.cste.org/resource/resmgr/eca/2017_ECA_Report_Web__5_.pdf" target="_blank"><button class="btn-linked-v2"><i class="fas fa-file-pdf" aria-hidden="true"></i>2017 Epidemiology Capacity Assessment Report</button></a>
+                <br>
+                <a href="https://resources.cste.org/pdf/2013ECA.pdf" target="_blank"><button class="btn-linked-v2"><i class="fas fa-file-pdf" aria-hidden="true"></i>2013 Epidemiology Capacity Assessment Report</button></a>
+                <br>
+                <div class="two-col-container">
+
+
+                    <br />
+
+                    <div class="full-report">
+
+                        <a href="http://www.cste2.org/2013eca/CSTEEHEpidemiologyCapacityAssessment2014final.pdf" target="_blank"><button class="btn-linked-v2"><i class="fas fa-file-pdf" aria-hidden="true"></i>2013 Epidemiology Capacity Assessment Environmental Health Module Report</button></a>
+
+                    </div>
+                    <!---End of Full-Report-->
+
+                    <div class="individual-highlights">
+
+                        <a href="https://www.cste.org/resource/resmgr/PDFs/CSTE2013nationalassessment.pdf" target="_blank"><button class="btn-linked-v2"><i class="fas fa-file-pdf" aria-hidden="true"></i> 2013 Epidemiology Capacity Assessment CD/MCH/OH Module Report</button></a>
+
+                    </div>
+                    <!---End of Full-Report-->
+
+                </div>
+                <!----END OF two-col-container----->
+
+                <a href="https://www.cste.org/resource/resmgr/eca/2010_epi_enumeration.pdf" target="_blank"><button class="btn-linked-v2"><i class="fas fa-file-pdf" aria-hidden="true"></i>2010 Epidemiology Capacity Assessment Enumeration Report</button></a>
+
+                <a href="https://www.cste.org/resource/resmgr/eca/2009_ECA.pdf" target="_blank"><button class="btn-linked-v2"><i class="fas fa-file-pdf" aria-hidden="true"></i>2009 Epidemiology Capacity Assessment Report</button></a>
+
+                <a href="https://www.cste.org/resource/resmgr/eca/2006_ECA_report_PDF.pdf" target="_blank"><button class="btn-linked-v2"><i class="fas fa-file-pdf" aria-hidden="true"></i>2006 Epidemiology Capacity Assessment Report</button></a>
+
+                <a href="https://www.cste.org/resource/resmgr/eca/2004_ECA_report.pdf" target="_blank"><button class="btn-linked-v2"><i class="fas fa-file-pdf" aria-hidden="true"></i>2004 Epidemiology Capacity Assessment Report</button></a>
+
+                <a href="https://www.cste.org/resource/resmgr/eca/2001_Epidemiology_Capacity_A.pdf" target="_blank"><button class="btn-linked-v2"><i class="fas fa-file-pdf" aria-hidden="true"></i>2001 Epidemiology Capacity Assessment Report</button></a>
+
+                <br />
+
+            </div>
+            <!-------END OFD fastlane-section-->
+
+
+
+            <div class="letter-headline">
+
+                <h2>Resources</h2>
+
+            </div>
+            <!--- End of letter-headline-->
+
+            <div class="resources">
+
+
+
+                <br />
+                <ul>
+                    <li class="resources-li-v1">
+                        <strong>Publications</strong>
+                        <ul class="sublist-v2">
+
+                            <li class="resources-li-v1">
+                                Arrazola, J., Israel, M. N., & Binkin, N. (2019).
+                                <a href="https://journals.sagepub.com/doi/full/10.1177/0033354919849887" target="_blank" style="color: blue;">
+                            <em>Applied epidemiology workforce growth and capacity challenges: The Council of State and Territorial Epidemiologists 2017 epidemiology capacity assessment. Public Health Reports, 134(4), 379-385.</em> 
+                            </a>
+
+                            </li>
+                            <li class="resources-li-v1">
+                                McGinty, M. D., Binkin, N., Arrazola, J., Israel, M. N., & Juliano, C. (2019).
+                                <a href="https://journals.sagepub.com/doi/full/10.1177/0033354919856935" target="_blank" style="color: blue;">
+                            <em>Epidemiology workforce capacity in 27 large urban health departments in the United States, 2017. Public Health Reports, 134(4), 386-394. </em>
+                            </a>
+
+                            </li>
+                            <li class="resources-li-v1">
+                                Arrazola, J., Binkin, N., Israel, M., Fleischauer, A., Daly, E. R., Harrison, R., & Engel, J. (2018).
+                                <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6107317/" target="_blank" style="color: blue;">
+                            <em>Assessment of epidemiology capacity in state health departments—United States, 2017. Morbidity and Mortality Weekly Report, 67(33), 935. </em>
+                            </a>
+
+                            </li>
+                            <li class="resources-li-v1">
+
+                                Hadler, J. L., Lampkins, R., Lemmings, J., Lichtenstein, M., Huang, M., & Engel, J. (2015).
+                                <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5779539/" target="_blank" style="color: blue;">
+                            <em>Assessment of epidemiology capacity in state health departments—United States, 2013. MMWR. Morbidity and mortality weekly report, 64(14), 394. </em>
+                            </a>
+                            </li>
+                            <li class="resources-li-v1">
+                                Beck, A. J., Boulton, M. L., Lemmings, J., & Clayton, J. L. (2012).
+                                <a href="https://www.researchgate.net/profile/Matthew-Boulton/publication/51886496_Challenges_to_Recruitment_and_Retention_of_the_State_Health_Department_Epidemiology_Workforce/links/5b3a5fcf0f7e9b0df5e81831/Challenges-to-Recruitment-and-Retention-of-the-State-Health-Department-Epidemiology-Workforce.pdf"
+                                    target="_blank" style="color: blue;">
+                            <em>Challenges to recruitment and retention of the state health department epidemiology workforce. American journal of preventive medicine, 42(1), 76-80.</em> 
+                            </a>
+                            </li>
+                            <li class="resources-li-v1">
+                                Boulton, M. L., Hadler, J., Beck, A. J., Ferland, L., & Lichtveld, M. (2011).
+                                <a href="https://journals.sagepub.com/doi/pdf/10.1177/003335491112600112" target="_blank" style="color: blue;">
+                            <em>Assessment of epidemiology capacity in state health departments, 2004–2009. Public Health Reports, 126(1), 84-93. </em>
+                            </a>
+                            </li>
+                            <li class="resources-li-v1">
+                                Boulton, M. L., Hadler, J. L., Ferland, L., & Lemmings, J. (2009). <em><a href="https://www.cabdirect.org/cabdirect/abstract/20103011920" target="_blank" style="color: blue;">Assessment of epidemiology capacity in state health departments-United States, 2009. Morbidity and Mortality Weekly Report, 58(49), 1373-1377.</a></em>
+                            </li>
+                            <li class="resources-li-v1">
+                                Boulton, M. L., Lemmings, J., & Beck, A. J. (2009).
+                                <a href="https://www.researchgate.net/profile/Matthew-Boulton/publication/26291465_Assessment_of_Epidemiology_Capacity_in_State_Health_Departments_2001-2006/links/5b3a722a4585150d23f1c827/Assessment-of-Epidemiology-Capacity-in-State-Health-Departments-2001-2006.pdf"
+                                    target="_blank" style="color: blue;">
+                            <em>Assessment of epidemiology capacity in state health departments, 2001–2006. Journal of Public Health Management and Practice, 15(4), 328-336 </em>
+                            </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="resources-li-v1">
+                        <strong>Webinars</strong>
+                    </li>
+                    <ul class="sublist-v2">
+                        <li class="resources-li-v1">
+                          <a href=""> 2021 Epidemiologists Capacity Assessment 
+                          </a>
+                        </li>
+                    </ul>
+                </ul>
+
+            </div>
+            <!---End of Resources Section--->
+
+
+
+
+
+
+
+
+
+
+        </div>
+        <!---END OF Inner-Container--->
+
+    </div>
+    <!----END OF Main-Container-->
+
+</body>
+
+</html>
